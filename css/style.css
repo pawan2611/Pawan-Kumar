@@ -1,0 +1,94 @@
+body {
+  background-color: #eee7e1 !important;
+  color: #1a1919 !important;
+  font-family: "Montserrat", sans-serif;
+}
+.flex-side {
+  display: flex;
+}
+.sidebar-width {
+  width: 5rem;
+  position: fixed;
+}
+.main-aside {
+  margin-left: 4rem;
+  margin-top: -5rem;
+}
+#sidebar-last {
+  position: fixed;
+  bottom: 2rem;
+}
+.sidebar-buttons {
+  background-color: #eee7e1 !important;
+}
+.sidebar-position {
+  margin-left: -0.5rem;
+}
+.sidebar-buttons > img {
+  height: 1.5rem;
+  filter: invert(0.1);
+  transform: rotate(270deg);
+}
+.sidebar-last-button {
+  display: inline-block;
+  height: 1.5rem;
+  transform: rotate(270deg);
+  color: #1a1919 !important;
+}
+.flex-side {
+  display: flex;
+}
+#main-aside {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 5rem;
+}
+#main-section1 {
+  width: 50% !important;
+}
+#main-section2 {
+  width: 50% !important;
+}
+.page-links {
+  box-sizing: border-box;
+  padding-right: 7rem !important;
+  padding-top: 6.75rem !important;
+}
+#my-name {
+  color: #1a1919;
+  font-weight: bolder;
+}
+.welcome {
+  font-family: "Bodoni Moda", "MuseoModerno", cursive, sans-serif;
+  color: #1a1919 !important;
+}
+.page-link-btn {
+  font-family: "Bodoni Moda", "MuseoModerno", cursive, sans-serif;
+  background-color: #eee7e1 !important;
+  color: #1a1919 !important;
+  border: #eee7e1;
+  font-size: 5rem;
+}
+.page-link-btn > img {
+  height: 4rem;
+  margin-top: 8%;
+}
+.copyright-year {
+  color: #1a1919;
+}
+@media (max-width: 992px) {
+  #main-aside {
+    flex-direction: column;
+  }
+  #main-section1 {
+    width: 100% !important;
+    height: fit-content;
+  }
+  #main-section2 {
+    width: 100% !important;
+    height: fit-content;
+  }
+  .page-links {
+    padding-top: 1rem !important;
+  }
+}
