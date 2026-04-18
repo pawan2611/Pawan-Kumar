@@ -1,0 +1,148 @@
+body {
+  background-color: #eee7e1 !important;
+  color: #000000 !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex-side {
+  display: flex;
+}
+
+.sidebar-position {
+  margin-left: -0.5rem;
+}
+
+.sidebar-width {
+  width: 5rem;
+  position: fixed;
+}
+
+.main-aside {
+  margin-left: 4rem;
+  margin-top: -5rem;
+  width: 100%;
+}
+
+#sidebar-last {
+  position: fixed;
+  bottom: 2rem;
+}
+
+.sidebar-buttons {
+  background-color: #eee7e1 !important;
+}
+
+.sidebar-buttons>img {
+  height: 1.5rem;
+  filter: invert(0.1);
+  transform: rotate(270deg);
+}
+
+.sidebar-buttons-second-last {
+  padding-bottom: 6rem;
+}
+
+.sidebar-last-button {
+  display: inline-block;
+  height: 1.5rem;
+  transform: rotate(270deg);
+  color: #000000 !important;
+}
+
+.mycls-hello {
+  font-family: "Bodoni Moda", "MuseoModerno", cursive, sans-serif;
+  font-size: 7rem;
+}
+
+/* Contact intro text */
+.contact-intro {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #000000;
+}
+
+/* Contact details block — row on desktop, column on mobile */
+.contact-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* Individual contact item */
+.contact-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 2px solid #000000 !important;
+  flex: 1 1 200px;
+  /* allows wrapping on small screens */
+  min-width: 0;
+}
+
+/* Contact label */
+.contact-label {
+  font-size: 1.8rem;
+  font-family: "Bodoni Moda", "MuseoModerno", cursive, sans-serif;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Contact link */
+.contact-a {
+  color: #000000 !important;
+  font-weight: 300;
+  font-size: 1.3rem !important;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-a:hover {
+  text-decoration: line-through;
+  color: #000000 !important;
+}
+
+/* Location text */
+.contact-location {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+  .main-aside {
+    margin-left: 4rem;
+    margin-top: 0;
+    width: calc(100% - 4rem);
+  }
+
+  .mycls-hello {
+    font-size: 3.5rem;
+  }
+
+  /* Stack contact items vertically on mobile */
+  .contact-details {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Reduce intro text size on mobile */
+  .contact-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .contact-label {
+    font-size: 1.1rem;
+  }
+
+  .contact-a {
+    font-size: 0.9rem;
+  }
+}
