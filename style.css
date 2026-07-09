@@ -1,0 +1,153 @@
+/* style.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --fg: #f0ebe3;
+  --gold: #c9a84c;
+  --fg-dim: #a39c8f;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 32rem;
+  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.headline .accent {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: var(--fg-dim);
+  line-height: 1.6;
+  margin: 0 auto 2.25rem;
+  max-width: 26rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+.fineprint {
+  margin-top: 1.75rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+  opacity: 0.7;
+}
+
+.fineprint code {
+  font-family: inherit;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    animation: none;
+  }
+  .cta,
+  .cta-arrow {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
